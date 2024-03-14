@@ -41,9 +41,28 @@ body{
 }
 
 .weather-box{
-    border: 2px solid white;
+    border: 2px solid black;
     height: 500px;
     margin-top: 50px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: rgb(158, 154, 154);
+}
+
+.icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.weather{
+    font-size:24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.temperature{
+    font-size:30px;
+    margin-bottom: 10px;
+}
+.description{
+    font-size: 16px;
+    color: rgb(52, 123, 245);
 }
