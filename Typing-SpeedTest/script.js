@@ -33,6 +33,10 @@ function loadParagraph(){
     }
 
     typingText.querySelectorAll('span')[0].classList.add('active')
+
+    document.addEventListener('keydown',()=>input.focus());
+
+    typingText.addEventListener("click",()=>{input.focus()});
 };
 
 //HANDLE USER INPUT
@@ -41,20 +45,60 @@ function initTyping(){
     const typedChar = input.value.charAt(charIndex);
 
     if(charIndex < char.length && timeLeft > 0){
+
+        if(!isTyping){
+            timer = setInterval(initTime,1000);
+            isTyping = true;
+        }
+
         if(char[charIndex].innerText === typedChar){
             char[charIndex].classList.add('correct');
             console.log("correct");
         }
         else{
+            mistake++;
             char[charIndex].classList.add('in-correct');
             console.log("in-correct");
         }
         charIndex++;
+
+        char[charIndex].classList.add('active');
+        mistakes.innerText = mistake;
+        cpm.innerText = charIndex - mistake;
     }
     else{
-
+        clearInterval(timer);
+        input.value='';
     }
 }
 
+function initTime(){
+    if(timeLeft>0){
+        timeLeft--;
+        time.innerText = timeLeft;
+
+        let wpmVal = Math.round(((charIndex - mistake)/5)/(maxTime - timeLeft)*60);
+        wpm.innerText = wpmVal;
+    }
+    else{
+        clearInterval(timer);
+    }
+}
+
+function reset(){
+    loadParagraph();
+    clearInterval(timer);
+    timeLeft = maxTime;
+    time.innerText = timeLeft;
+    input.value='';
+    charIndex = 0;
+    mistake = 0;
+    isTyping = false;
+    wpm.innerText=0;
+    cpm.innerText=0;
+    mistake.innerText=0;
+}
+
 input.addEventListener("input",initTyping);
+btn.addEventListener("click", reset);
 loadParagraph();
