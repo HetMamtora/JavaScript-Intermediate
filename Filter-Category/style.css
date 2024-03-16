@@ -1,4 +1,36 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.search-container{
+    display: flex;
+}
+
+#search-input{
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#search-btn{
+    padding: 5px 10px;
+    background-color: orange;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.category-container{
+    display: flex;
+}
+
+.category-btn{
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #2196F3;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
 }
