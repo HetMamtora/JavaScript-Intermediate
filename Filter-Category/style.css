@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
 .search-container{
     display: flex;
 }
@@ -33,4 +39,17 @@
     color: aliceblue;
     border: none;
     cursor: pointer;
+}
+
+.product-item{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.product-list{
+    display: flex;
+    padding: 20px;
+    text-align: center;
 }
