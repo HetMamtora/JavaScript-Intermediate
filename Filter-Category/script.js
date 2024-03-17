@@ -28,7 +28,6 @@ function setCategory(e){
     
 }
 
-
 searchBtn.addEventListener("click", filterProduct);
 searchInput.addEventListener("keyup", filterProduct);
 categoryBtns.forEach(btn=>{
