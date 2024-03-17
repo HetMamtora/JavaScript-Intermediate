@@ -6,12 +6,13 @@ const categoryBtns = document.querySelectorAll(".category-btn");
 function filterProduct(){
     const searchValue = searchInput.value.toLowerCase();
     const productItems = document.querySelectorAll(".product-item");
+    const activeCategory = document.querySelector(".category-btn.active").dataset.category;
 
     productItems.forEach(item=>{
         const title = item.querySelector("h3").innerText.toLowerCase();
         const category = item.dataset.category;
 
-        if(title.includes(searchValue) || searchValue==""){
+        if((title.includes(searchValue) || searchValue=="") && (category === activeCategory || activeCategory ==="all")){
             item.style.display="block";
         }
         else{
@@ -21,10 +22,10 @@ function filterProduct(){
 }
 
 function setCategory(e){
-    categoryBtns.forEach(btn=>{
+    categoryBtns.forEach(btn=> btn.classList.remove("active"));
         e.target.classList.add("active");
         filterProduct();
-    })
+    
 }
 
 
