@@ -37,7 +37,7 @@ header .logo{
     transition: 0.5s;
 }
 
-span{
+header .logo span{
     color: orange;
     font-size: 2em;
 }
@@ -55,4 +55,42 @@ header ul li a{
     font-size: 1.2em;
     color: #333;
     transition: 0.5s;
+}
+
+.content{
+    position: relative;
+    max-width: 700px;
+}
+
+.content h2{
+    font-size: 5.5em;
+    color: #333;
+    transition: 0.5;
+}
+.content h2 span{
+    color: orange;
+}
+.content p{
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.content button{
+    position: relative;
+    background: orange;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.content button.chat{
+    background: transparent;
+    color: #333;
 }
