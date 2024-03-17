@@ -22,6 +22,7 @@ h1{
     border-bottom: 1px solid black;
     margin-bottom: 20px;
     text-align: center;
+    color: rgb(49, 70, 99);
 }
 
 .form-control{
@@ -52,4 +53,11 @@ h1{
     font-size: 12px;
     height: 13px;
     margin: 10px;
+}
+
+.form-control.success input{
+    border-color: green;
+}
+.form-control.error input{
+    border-color: red;
 }
