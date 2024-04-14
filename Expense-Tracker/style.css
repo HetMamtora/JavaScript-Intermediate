@@ -1,48 +1,67 @@
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #222;
+    color: #f4f4f4;
+    margin: 0;
 }
 
 .container{
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #333;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-input[type="text"],select,input[type=number],input[type=submit]{
+input[type="text"],
+select,
+input[type=number],
+input[type=submit]{
     margin-bottom: 10px;
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    width: calc(100% - 16px);
+    padding: 10px;
+    border: 1px solid #555;
     border-radius: 4px;
+    background-color: #444;
+    color: #f4f4f4;
     box-sizing: border-box;
 }
 
+input[type="text"]::placeholder,
+select::placeholder,
+input[type=number]::placeholder{
+    color: #888;
+}
+
 input[type=submit]{
-    background-color: #4caf5d;
-    color: white;
+    background-color: #5e8a69;
+    color: #fff;
     border: none;
     cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 input[type=submit]:hover{
-    background-color: #45a049;
+    background-color: #4c7655;
 }
 
 table{
     width: 100%;
     border-collapse: collapse;
+    background-color: #333;
 }
 
-th,td{
-    border: 1px solid #ddd;
-    padding: 8px;
+th, td{
+    border: 1px solid #555;
+    padding: 10px;
     text-align: left;
+    background-color: #444;
+    color: #f4f4f4;
 }
 
 th{
-    background-color: #4caf5d;
-    color: white;
+    background-color: #5e8a69;
 }
